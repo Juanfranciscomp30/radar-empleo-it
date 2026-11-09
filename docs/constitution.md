@@ -1,6 +1,6 @@
 # Constitución — Radar de Empleo IT
 
-**Versión:** 1.0.0 · **Fecha:** 2026-11-09 · **Estado:** vigente
+**Versión:** 2.0.0 · **Fecha:** 2026-11-09 · **Estado:** vigente
 
 Este documento recoge los principios no negociables del proyecto. Toda spec, plan y línea de código debe respetarlos. Cambiarlos requiere un ADR y subir la versión.
 
@@ -32,15 +32,14 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 3. El fallo de un conector nunca detiene la ingesta de los demás.
 4. Las ofertas se deduplican entre fuentes.
 
-## IV. Política de fuentes
+## IV. Política de fuentes: 100 % legal
 
-1. Se priorizan APIs oficiales y feeds públicos.
-2. Se permiten **conectores restringidos** (scraping contra las condiciones de uso del portal, p. ej. LinkedIn) **solo para uso personal**, bajo estas reglas:
-   - Viven en un módulo separado (`connectors-restricted`) y están **desactivados por defecto**.
-   - Nunca usan credenciales ni sesiones de cuentas personales.
-   - Respetan límites de frecuencia conservadores.
-   - Solo extraen datos de la oferta; nunca datos personales de reclutadores o empleados.
-3. **Antes de publicar** el repositorio o desplegar la app: se elimina el módulo restringido **y su rastro en el historial de git** (repo nuevo desde estado limpio o reescritura del historial). Hasta entonces, el repositorio es **privado**.
+1. Solo se integran fuentes que **permiten expresamente el acceso automatizado**: APIs oficiales, feeds públicos (RSS/JSON) o portales cuyas condiciones de uso y `robots.txt` lo autoricen.
+2. Antes de implementar un conector, su spec documenta: tipo de acceso, enlace a las condiciones de uso revisadas, límites de uso (rate limits) y requisitos de atribución.
+3. Se respetan los límites de frecuencia y la atribución que exija cada fuente.
+4. Solo se almacenan datos de la oferta; nunca datos personales de reclutadores o empleados.
+5. Queda excluido el scraping de portales que lo prohíben (p. ej. LinkedIn).
+6. Como consecuencia, el repositorio puede ser **público** desde el inicio.
 
 ## V. Puntuación con IA
 
@@ -74,8 +73,13 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 
 1. Durante el MVP la app se ejecuta en local con Docker Compose.
 2. La demo de portfolio se hace con vídeo y capturas.
-3. El despliegue público en la nube es una fase posterior y exige cumplir antes el punto IV.3.
+3. El despliegue público en la nube es una fase posterior.
 
 ## Gobierno
 
 - Las modificaciones se hacen vía ADR y suben la versión (MAJOR: se elimina o redefine un principio; MINOR: se añade uno; PATCH: aclaraciones).
+
+## Historial
+
+- **2.0.0** (2026-11-09): el principio IV se redefine; se eliminan los conectores restringidos y solo se admiten fuentes con acceso automatizado permitido (ADR-0002).
+- **1.0.0** (2026-11-09): versión inicial.
