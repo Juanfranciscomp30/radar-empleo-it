@@ -1,6 +1,6 @@
 # Tareas 000: Esqueleto del proyecto
 
-**Estado:** Borrador · **Fecha:** 2026-11-09 · **Spec:** `spec.md` · **Plan:** `plan.md`
+**Estado:** Aprobado · **Fecha:** 2026-11-09 · **Spec:** `spec.md` · **Plan:** `plan.md`
 
 ## Cómo se trabaja con este fichero
 
@@ -16,14 +16,14 @@
 
 ## Preparación
 
-- [ ] **T0 [YO] Comprobar herramientas instaladas**
+- [x] **T0 [YO] Comprobar herramientas instaladas**
   - Qué: verificar que tengo Java 25 (JDK), Node.js (LTS compatible con Angular 22) y Docker Desktop arrancado.
   - Comprobación: `java -version` (debe decir 25), `node -v`, `npm -v`, `docker run hello-world`.
   - Commit: ninguno.
 
 ## Backend
 
-- [ ] **T1 [IA] Generar el proyecto Spring Boot**
+- [x] **T1 [IA] Generar el proyecto Spring Boot**
   - Qué: crear el proyecto en `backend/` con Spring Initializr según plan §2 (Java 25, Spring Boot 4.1.x, Maven Wrapper, paquete `com.juanfran.radar`, dependencias de §2).
   - Comprobación: `cd backend` y `.\mvnw compile` termina con `BUILD SUCCESS`.
   - Commit: `feat(backend): genera proyecto Spring Boot`

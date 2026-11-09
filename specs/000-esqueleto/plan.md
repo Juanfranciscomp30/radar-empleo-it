@@ -23,10 +23,10 @@ radar-empleo-it/
 - **Tecnología:** Java 25, Spring Boot 4.1.x, Maven Wrapper (`./mvnw`). Generado con Spring Initializr.
 - **Paquete base:** `com.juanfran.radar`.
 - **Dependencias:**
-  - `spring-boot-starter-web`: servidor HTTP.
+  - `spring-boot-starter-webmvc`: servidor HTTP. En Spring Boot 4 sustituye al antiguo `spring-boot-starter-web`.
   - `spring-boot-starter-actuator`: endpoint de salud.
   - `spring-boot-starter-jdbc` + driver `postgresql`: conexión a la base de datos. La elección de JPA u otra capa de persistencia se decide en la spec 001.
-  - Test: `spring-boot-starter-test`, Testcontainers (PostgreSQL) y su integración con Spring Boot.
+  - Test: starters de test por módulo de Spring Boot 4 (p. ej. `spring-boot-starter-actuator-test`), Testcontainers (PostgreSQL) y su integración con Spring Boot.
 - **Configuración** (`application.yml`, valores sensibles desde variables de entorno):
   - Datasource leído de `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME` y `SPRING_DATASOURCE_PASSWORD`.
   - Actuator (cumple CA-2 y CA-3):
@@ -114,3 +114,7 @@ Requisitos (Docker Desktop), pasos para arrancar (`copy .env.example .env`, `doc
 - **Versiones muy recientes (Spring Boot 4, Angular 22):** puede haber menos ejemplos; ante dudas, consultar la documentación oficial.
 - **Memoria del portátil:** Docker Desktop + 3 contenedores + IDE consumen bastante; cerrar lo que no se use.
 - **Healthcheck del backend:** la herramienta usada para llamar a `/api/health` debe existir en la imagen final (comprobar al implementar).
+
+## Historial
+
+- **2026-11-09:** corrección durante T1: nombres de starters de Spring Boot 4 (`webmvc` y starters de test por módulo). Sin cambio de alcance.
