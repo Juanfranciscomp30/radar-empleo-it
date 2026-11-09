@@ -1,6 +1,6 @@
 # Plan 000: Esqueleto del proyecto
 
-**Estado:** Borrador · **Fecha:** 2026-11-09 · **Spec:** `specs/000-esqueleto/spec.md` · **ADRs:** 0004, 0005, 0006
+**Estado:** Aprobado · **Fecha:** 2026-11-09 · **Spec:** `specs/000-esqueleto/spec.md` · **ADRs:** 0004, 0005, 0006
 
 Este documento describe **cómo** se construye la spec 000. No añade requisitos: todo lo que aquí aparece sirve para cumplir algún criterio de aceptación (CA) de la spec.
 
