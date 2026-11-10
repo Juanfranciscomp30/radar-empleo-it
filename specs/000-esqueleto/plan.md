@@ -48,7 +48,7 @@ radar-empleo-it/
 
 ### 4.1 Imágenes
 
-- **Backend:** Dockerfile multi-etapa. Etapa 1: JDK 25 compila con `./mvnw package`. Etapa 2: solo JRE 25 con el `.jar`.
+- **Backend:** Dockerfile multi-etapa. Etapa 1: JDK 25 compila con `./mvnw package -DskipTests` (los tests corren en `./mvnw verify` en local y en CI, porque Testcontainers necesita Docker y no está disponible dentro de la build). Etapa 2: solo JRE 25 con el `.jar`.
 - **Frontend:** Dockerfile multi-etapa (ADR-0006). Etapa 1: Node (LTS compatible con Angular 22) ejecuta el build de producción. Etapa 2: nginx sirve los estáticos.
 - **nginx (`frontend/nginx.conf`):**
   - Sirve los ficheros de Angular y, ante rutas desconocidas, devuelve `index.html` (necesario en una SPA).
@@ -118,3 +118,4 @@ Requisitos (Docker Desktop), pasos para arrancar (`copy .env.example .env`, `doc
 ## Historial
 
 - **2026-11-09:** corrección durante T1: nombres de starters de Spring Boot 4 (`webmvc` y starters de test por módulo). Sin cambio de alcance.
+- **2026-11-10:** corrección durante T4: la etapa de build del Dockerfile compila con `-DskipTests` (los tests se ejecutan con `verify` en local y CI). Sin cambio de alcance.

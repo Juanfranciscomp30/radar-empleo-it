@@ -40,7 +40,7 @@
   - Commit: `test(backend): test de integración de /api/health con Testcontainers`
   - Cubre: CA-5
 
-- [ ] **T4 [IA] Dockerfile del backend**
+- [x] **T4 [IA] Dockerfile del backend**
   - Qué: Dockerfile multi-etapa según plan §4.1 (JDK 25 para compilar, JRE 25 para ejecutar, etiquetas de versión fijas).
   - Comprobación: desde la raíz, `docker build -t radar-backend ./backend` termina sin errores.
   - Commit: `build(backend): Dockerfile multi-etapa`

@@ -1,0 +1,6 @@
+# Ficheros que no se envían al contexto de build de Docker
+target/
+.idea/
+.vscode/
+*.iml
+.env
