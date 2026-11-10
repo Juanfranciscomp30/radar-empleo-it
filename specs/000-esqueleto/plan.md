@@ -49,8 +49,8 @@ radar-empleo-it/
 ### 4.1 Imágenes
 
 - **Backend:** Dockerfile multi-etapa. Etapa 1: JDK 25 compila con `./mvnw package -DskipTests` (los tests corren en `./mvnw verify` en local y en CI, porque Testcontainers necesita Docker y no está disponible dentro de la build). Etapa 2: solo JRE 25 con el `.jar`.
-- **Frontend:** Dockerfile multi-etapa (ADR-0006). Etapa 1: Node (LTS compatible con Angular 22) ejecuta el build de producción. Etapa 2: nginx sirve los estáticos.
-- **nginx (`frontend/nginx.conf`):**
+- **Frontend:** Dockerfile multi-etapa (ADR-0006). Etapa 1: Node (`node:24.19.0-alpine`, LTS compatible con Angular 22) ejecuta el build de producción. Etapa 2: nginx (`nginx:1.30.6-alpine`, última estable) sirve los estáticos.
+- **nginx (`frontend/nginx.conf`, copiado en la imagen a `/etc/nginx/conf.d/default.conf`):**
   - Sirve los ficheros de Angular y, ante rutas desconocidas, devuelve `index.html` (necesario en una SPA).
   - `location /api/` → `proxy_pass http://backend:8080` (por nombre de servicio, nunca `localhost`).
 - Todas las imágenes base usan **etiquetas de versión concretas**, nunca `latest`, para que la build sea reproducible.
@@ -123,3 +123,4 @@ Requisitos (Docker Desktop), pasos para arrancar (`copy .env.example .env`, `doc
 - **2026-11-10:** corrección durante T5: §4.2 fija la imagen `postgres:18.6` (la misma que los tests) y monta el volumen en `/var/lib/postgresql` (requisito de PostgreSQL 18+). Sin cambio de alcance.
 - **2026-11-10:** precisión durante T7: §5 indica que el runner por defecto de Angular 22 es Vitest (vía `ng test`). Sin cambio de alcance.
 - **2026-11-10:** precisión durante T8: §3 indica que el componente principal muestra «Comprobando…» mientras llega la primera respuesta del backend. Sin cambio de alcance.
+- **2026-11-10:** concreción durante T9: §4.1 fija las imágenes del frontend (`node:24.19.0-alpine` y `nginx:1.30.6-alpine`) y la ruta de `nginx.conf` en la imagen (`/etc/nginx/conf.d/default.conf`). Sin cambio de alcance.

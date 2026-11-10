@@ -78,7 +78,7 @@
   - Commit: `feat(frontend): página de estado del backend`
   - Cubre: CA-4
 
-- [ ] **T9 [IA] Dockerfile del frontend, nginx y servicio en compose**
+- [x] **T9 [IA] Dockerfile del frontend, nginx y servicio en compose**
   - Qué: Dockerfile multi-etapa + `nginx.conf` (SPA y proxy `/api/` → `backend:8080`) según plan §4.1, y servicio `frontend` en `docker-compose.yml` (§4.2).
   - Comprobación: `docker compose up --build` → `http://localhost:4200` muestra **"Conectado"** sin tener `npm start` arrancado.
   - Commit: `build(frontend): imagen nginx y servicio en docker-compose`
