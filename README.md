@@ -3,8 +3,9 @@
 **Agregador de ofertas de empleo IT junior con puntuación de encaje por IA.**
 Recoge ofertas de varias fuentes legales, las normaliza y las ordena según lo bien que encajan con mi perfil.
 
-> 🚧 **En desarrollo activo.** Ahora mismo está terminada la base técnica del backend. Consulta el [roadmap](#-roadmap).
+> 🚧 **En desarrollo activo.** Ahora mismo está terminada la base técnica (frontend, backend, base de datos y CI). Consulta el [roadmap](#-roadmap).
 
+[![CI](https://github.com/Juanfranciscomp30/radar-empleo-it/actions/workflows/ci.yml/badge.svg)](https://github.com/Juanfranciscomp30/radar-empleo-it/actions/workflows/ci.yml)
 ![Java](https://img.shields.io/badge/Java-25-orange)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.1-6DB33F)
 ![Angular](https://img.shields.io/badge/Angular-22-DD0031)
@@ -65,9 +66,9 @@ flowchart LR
 | Backend | Java 25 (LTS), Spring Boot 4.1, Maven Wrapper, Spring Boot Actuator |
 | Frontend | Angular 22 (standalone), nginx |
 | Base de datos | PostgreSQL 18 |
-| Tests | JUnit 5, Testcontainers (PostgreSQL real en los tests de integración) |
+| Tests | Backend: JUnit 5 y Testcontainers (PostgreSQL real en los tests de integración). Frontend: Vitest |
 | Infraestructura | Docker (imágenes multi-etapa), Docker Compose |
-| CI | GitHub Actions |
+| CI | GitHub Actions: compila y testea backend y frontend y construye las imágenes en cada push y pull request |
 | Desarrollo con IA | Claude Code + skill propia para el flujo SDD |
 
 ## 🧩 Decisiones destacadas
@@ -86,35 +87,71 @@ Algunos detalles de seguridad y calidad:
 
 ## 🚀 Cómo arrancarlo
 
-**Requisitos:** [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+**Requisito:** [Docker Desktop](https://www.docker.com/products/docker-desktop/) abierto. No hace falta instalar Java ni Node para ejecutar la aplicación.
 
 ```bash
-# 1. Variables de entorno (cambia la contraseña en .env)
+# 1. Clonar el repositorio
+git clone https://github.com/Juanfranciscomp30/radar-empleo-it.git
+cd radar-empleo-it
+
+# 2. Variables de entorno (cambia la contraseña en .env)
 cp .env.example .env          # en Windows: copy .env.example .env
 
-# 2. Levantar base de datos y backend
-docker compose up --build db backend
+# 3. Levantar todo el sistema (frontend, backend y PostgreSQL)
+docker compose up --build
 ```
 
-Comprueba que funciona: **http://localhost:8080/api/health** → `"status": "UP"`, con la base de datos en `UP`.
+La primera vez tarda unos minutos porque descarga imágenes y compila. Cuando termine:
 
-> Las instrucciones completas, con frontend incluido, se añadirán al terminar la spec 000.
+| URL | Qué deberías ver |
+|---|---|
+| **http://localhost:4200** | La web con el título "Radar de Empleo IT" y el estado del backend: **Conectado** |
+| **http://localhost:8080/api/health** | `"status": "UP"`, con la base de datos (`db`) en `UP` |
 
-### Tests del backend
+Para pararlo: `Ctrl+C`, o `docker compose down` si lo arrancaste en segundo plano con `-d`. Los datos de PostgreSQL se guardan en un volumen y no se pierden al parar.
+
+> **Puertos ocupados:** el sistema usa los puertos 4200, 8080 y 5432. Si alguno está en uso (por ejemplo, un `npm start` olvidado en el 4200), cierra ese programa antes de arrancar.
+
+### Desarrollar el frontend
+
+Para trabajar en Angular con recarga automática, el frontend se ejecuta fuera de Docker y el backend dentro. Requiere [Node.js](https://nodejs.org/) 24.
 
 ```bash
-cd backend
-./mvnw verify      # requiere Docker abierto (Testcontainers arranca un PostgreSQL real)
+# Terminal 1: base de datos y backend en Docker
+docker compose up db backend
+
+# Terminal 2: servidor de desarrollo de Angular
+cd frontend
+npm ci
+npm start
 ```
+
+Abre **http://localhost:4200**. Las llamadas a `/api` se redirigen al backend gracias a [`proxy.conf.json`](frontend/proxy.conf.json). No arranques a la vez el servicio `frontend` de Docker, porque usa el mismo puerto.
+
+### Tests
+
+```bash
+# Backend (requiere Docker abierto: Testcontainers arranca un PostgreSQL real; necesita JDK 25)
+cd backend
+./mvnw verify          # en Windows: .\mvnw verify
+
+# Frontend
+cd frontend
+npm ci
+npx ng test --watch=false
+```
+
+Los mismos comandos se ejecutan en [GitHub Actions](.github/workflows/ci.yml) en cada push a `main` y en cada pull request.
 
 ## 📁 Estructura
 
 ```
 radar-empleo-it/
 ├── backend/            # Spring Boot
-├── frontend/           # Angular (en curso)
+├── frontend/           # Angular + nginx
 ├── docker-compose.yml
 ├── .env.example
+├── .github/workflows/  # CI con GitHub Actions
 ├── docs/
 │   ├── constitution.md
 │   └── adr/            # Decisiones de arquitectura
@@ -127,8 +164,9 @@ radar-empleo-it/
 - [ ] **Spec 000: esqueleto**
   - [x] Backend con endpoint de salud y test de integración
   - [x] Docker Compose con PostgreSQL y backend
-  - [ ] Frontend Angular con página de estado
-  - [ ] CI con GitHub Actions
+  - [x] Frontend Angular con página de estado, servido con nginx
+  - [x] CI con GitHub Actions
+  - [x] README con instrucciones de arranque
 - [ ] **Spec 001:** modelo de oferta normalizado y primer conector (Jobicy)
 - [ ] Conector InfoJobs (API oficial) y deduplicación entre fuentes
 - [ ] Puntuación de encaje con IA, con explicación de motivos

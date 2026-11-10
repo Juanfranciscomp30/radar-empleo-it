@@ -92,7 +92,7 @@
   - Commit: `ci: workflow de build y tests`
   - Cubre: CA-7
 
-- [ ] **T11 [IA] README**
+- [x] **T11 [IA] README**
   - Qué: actualizar `README.md` según plan §7.
   - Comprobación: seguir el README paso a paso como si fuera alguien nuevo; debe funcionar sin saber nada más.
   - Commit: `docs: README con instrucciones de arranque`
