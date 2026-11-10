@@ -45,7 +45,7 @@
   - Comprobación: desde la raíz, `docker build -t radar-backend ./backend` termina sin errores.
   - Commit: `build(backend): Dockerfile multi-etapa`
 
-- [ ] **T5 [IA] docker-compose con base de datos y backend**
+- [x] **T5 [IA] docker-compose con base de datos y backend**
   - Qué: `docker-compose.yml` con los servicios `db` y `backend` según plan §4.2 (healthchecks, dependencias, volumen) y `.env.example` según §4.3.
   - Comprobación:
     1. `copy .env.example .env` y cambiar la contraseña en `.env`.

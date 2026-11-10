@@ -59,13 +59,13 @@ radar-empleo-it/
 
 | Servicio | Imagen | Puerto interno → PC | Depende de | Healthcheck |
 |---|---|---|---|---|
-| `db` | PostgreSQL (versión mayor estable actual, etiqueta fija) | 5432 → 5432 | — | `pg_isready` |
+| `db` | `postgres:18.6` (misma imagen que los tests de Testcontainers) | 5432 → 5432 | — | `pg_isready` |
 | `backend` | build de `./backend` | 8080 → 8080 | `db` sano | `GET /api/health` |
 | `frontend` | build de `./frontend` | 80 → 4200 | `backend` sano | — |
 
 - Las credenciales de la base de datos se leen de `.env`.
 - El backend recibe `SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/${POSTGRES_DB}`.
-- Volumen con nombre para los datos de PostgreSQL (no se pierden al parar los contenedores).
+- Volumen con nombre para los datos de PostgreSQL (no se pierden al parar los contenedores), montado en `/var/lib/postgresql` (requisito desde PostgreSQL 18; la ruta antigua `.../data` ya no vale).
 
 ### 4.3 Variables de entorno (`.env.example`, CA-8)
 
@@ -119,3 +119,5 @@ Requisitos (Docker Desktop), pasos para arrancar (`copy .env.example .env`, `doc
 
 - **2026-11-09:** corrección durante T1: nombres de starters de Spring Boot 4 (`webmvc` y starters de test por módulo). Sin cambio de alcance.
 - **2026-11-10:** corrección durante T4: la etapa de build del Dockerfile compila con `-DskipTests` (los tests se ejecutan con `verify` en local y CI). Sin cambio de alcance.
+- **2026-11-10:** decisión durante T5: la imagen final del backend instala `curl` (etapa 2 del Dockerfile) y el healthcheck de `docker-compose` usa `curl -f http://localhost:8080/api/health`. Resuelve el riesgo del §9 sobre el healthcheck. Sin cambio de alcance.
+- **2026-11-10:** corrección durante T5: §4.2 fija la imagen `postgres:18.6` (la misma que los tests) y monta el volumen en `/var/lib/postgresql` (requisito de PostgreSQL 18+). Sin cambio de alcance.

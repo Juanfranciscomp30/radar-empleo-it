@@ -20,6 +20,11 @@ RUN ./mvnw -B -q package -DskipTests \
 FROM eclipse-temurin:25.0.5_8-jre-noble
 WORKDIR /app
 
+# curl: lo usa el healthcheck de docker-compose para llamar a /api/health.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl \
+    && rm -rf /var/lib/apt/lists/*
+
 # No ejecutar la aplicación como root.
 RUN groupadd --system radar && useradd --system --gid radar radar
 COPY --from=build /app/app.jar app.jar
