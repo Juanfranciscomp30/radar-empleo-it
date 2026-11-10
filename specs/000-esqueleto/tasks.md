@@ -86,7 +86,7 @@
 
 ## Integración continua y documentación
 
-- [ ] **T10 [IA] Workflow de GitHub Actions**
+- [x] **T10 [IA] Workflow de GitHub Actions**
   - Qué: `.github/workflows/ci.yml` con los jobs `backend`, `frontend` y `docker` según plan §6.
   - Comprobación: hacer push y, en la pestaña **Actions** de GitHub, los tres jobs terminan en verde.
   - Commit: `ci: workflow de build y tests`
