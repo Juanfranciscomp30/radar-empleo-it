@@ -87,8 +87,8 @@ POSTGRES_PASSWORD=cambia-esto
 
 - **Se dispara en:** `push` a `main` y en cada `pull_request`.
 - **Job `backend`:** `ubuntu-latest`, Java 25 (Temurin) con caché de Maven, `./mvnw verify` (incluye el test con Testcontainers; Docker ya está disponible en el runner).
-- **Job `frontend`:** Node LTS con caché de npm, `npm ci`, tests en modo no interactivo y `npm run build`.
-- **Job `docker`:** `docker compose build` para comprobar que las imágenes se construyen.
+- **Job `frontend`:** Node `24.19.0` (la misma que la imagen del frontend) con caché de npm, `npm ci`, tests en modo no interactivo y `npm run build`.
+- **Job `docker`:** copia `.env.example` a `.env` y ejecuta `docker compose build` para comprobar que las imágenes se construyen.
 - Si cualquier job falla, el workflow falla.
 
 ## 7. README (CA-9)
@@ -124,3 +124,4 @@ Requisitos (Docker Desktop), pasos para arrancar (`copy .env.example .env`, `doc
 - **2026-11-10:** precisión durante T7: §5 indica que el runner por defecto de Angular 22 es Vitest (vía `ng test`). Sin cambio de alcance.
 - **2026-11-10:** precisión durante T8: §3 indica que el componente principal muestra «Comprobando…» mientras llega la primera respuesta del backend. Sin cambio de alcance.
 - **2026-11-10:** concreción durante T9: §4.1 fija las imágenes del frontend (`node:24.19.0-alpine` y `nginx:1.30.6-alpine`) y la ruta de `nginx.conf` en la imagen (`/etc/nginx/conf.d/default.conf`). Sin cambio de alcance.
+- **2026-11-10:** concreción durante T10: §6 fija Node `24.19.0` en el job `frontend` (la misma que la imagen del frontend) y el job `docker` copia `.env.example` a `.env` antes de `docker compose build`. Sin cambio de alcance.
