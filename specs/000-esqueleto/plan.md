@@ -80,7 +80,7 @@ POSTGRES_PASSWORD=cambia-esto
 ## 5. Tests
 
 - **Backend (CA-5):** test de integración `@SpringBootTest` que arranca PostgreSQL con Testcontainers y comprueba que `GET /api/health` responde `200` con estado `UP`. Se ejecuta con `./mvnw verify`.
-- **Frontend (CA-6):** test del `HealthService` con `HttpTestingController`: un caso con respuesta correcta (`true`) y otro con error (`false`). Runner por defecto de Angular 22.
+- **Frontend (CA-6):** test del `HealthService` con `HttpTestingController`: un caso con respuesta correcta (`true`) y otro con error (`false`). Runner por defecto de Angular 22 (Vitest, vía `ng test`).
 - **CA-3 (BD caída):** verificación manual en esta spec (parar el contenedor `db` y comprobar que `/api/health` devuelve `503`). Es comportamiento propio de Actuator, no código nuestro.
 
 ## 6. CI: GitHub Actions (`.github/workflows/ci.yml`, CA-7)
@@ -121,3 +121,4 @@ Requisitos (Docker Desktop), pasos para arrancar (`copy .env.example .env`, `doc
 - **2026-11-10:** corrección durante T4: la etapa de build del Dockerfile compila con `-DskipTests` (los tests se ejecutan con `verify` en local y CI). Sin cambio de alcance.
 - **2026-11-10:** decisión durante T5: la imagen final del backend instala `curl` (etapa 2 del Dockerfile) y el healthcheck de `docker-compose` usa `curl -f http://localhost:8080/api/health`. Resuelve el riesgo del §9 sobre el healthcheck. Sin cambio de alcance.
 - **2026-11-10:** corrección durante T5: §4.2 fija la imagen `postgres:18.6` (la misma que los tests) y monta el volumen en `/var/lib/postgresql` (requisito de PostgreSQL 18+). Sin cambio de alcance.
+- **2026-11-10:** precisión durante T7: §5 indica que el runner por defecto de Angular 22 es Vitest (vía `ng test`). Sin cambio de alcance.

@@ -63,7 +63,7 @@
   - Comprobación: `cd frontend`, `npm start` y abrir `http://localhost:4200` → se ve la página por defecto de Angular.
   - Commit: `feat(frontend): genera proyecto Angular`
 
-- [ ] **T7 [IA] HealthService y su test**
+- [x] **T7 [IA] HealthService y su test**
   - Qué: servicio que consulta `GET /api/health` y devuelve `true`/`false`, con test de los dos casos (plan §3 y §5).
   - Comprobación: los tests del frontend pasan (comando de test del proyecto, en modo no interactivo).
   - Commit: `feat(frontend): servicio de estado del backend con tests`
