@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: radar-backend
+  # Conexión a PostgreSQL: los valores llegan siempre por variables de entorno
+  # (en Docker los pone docker-compose a partir de .env). Nunca se escriben aquí.
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+
+management:
+  endpoints:
+    web:
+      # Endpoints de Actuator bajo /api -> el de salud queda en /api/health
+      base-path: /api
+      exposure:
+        # Solo se expone "health"; ningún otro endpoint de Actuator es accesible por HTTP
+        include: health
+  endpoint:
+    health:
+      # Se ve el estado de cada componente (p. ej. "db": UP/DOWN)...
+      show-components: always
+      # ...pero no los detalles internos (versión de la BD, consultas, etc.)
+      show-details: never

@@ -28,7 +28,7 @@
   - Comprobación: `cd backend` y `.\mvnw compile` termina con `BUILD SUCCESS`.
   - Commit: `feat(backend): genera proyecto Spring Boot`
 
-- [ ] **T2 [IA] Configurar datasource y Actuator**
+- [x] **T2 [IA] Configurar datasource y Actuator**
   - Qué: `application.yml` según plan §2: datasource desde variables de entorno; Actuator con ruta base `/api`, **solo `health` expuesto**, componentes visibles sin detalles.
   - Comprobación: revisar el fichero y confirmar que ningún otro endpoint de Actuator queda expuesto y que no hay contraseñas escritas.
   - Commit: `feat(backend): configura datasource y endpoint de salud`
