@@ -69,7 +69,7 @@
   - Commit: `feat(frontend): servicio de estado del backend con tests`
   - Cubre: CA-6
 
-- [ ] **T8 [IA] Página de estado y proxy de desarrollo**
+- [x] **T8 [IA] Página de estado y proxy de desarrollo**
   - Qué: componente principal con el título "Radar de Empleo IT" y "Conectado" / "Sin conexión"; `proxy.conf.json` para `npm start` (plan §3).
   - Comprobación:
     1. `docker compose up db backend` en una terminal.

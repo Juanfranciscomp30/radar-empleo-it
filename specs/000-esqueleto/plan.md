@@ -40,7 +40,7 @@ radar-empleo-it/
 
 - **Tecnología:** Angular 22.x, componentes standalone, generado con Angular CLI.
 - **`HealthService`:** hace `GET /api/health` y devuelve `true` si la respuesta es correcta y `false` ante cualquier error (backend caído, 503…).
-- **Componente principal:** muestra el título "Radar de Empleo IT" y el texto "Conectado" o "Sin conexión" según el `HealthService` (cumple CA-4). Sin diseño visual.
+- **Componente principal:** muestra el título "Radar de Empleo IT" y el texto "Conectado" o "Sin conexión" según el `HealthService` (cumple CA-4). Mientras llega la primera respuesta se muestra «Comprobando…». Sin diseño visual.
 - **Llamadas a la API con ruta relativa** (`/api/...`): nunca se escribe la URL del backend en el código.
 - **Desarrollo local (`npm start`):** `proxy.conf.json` redirige `/api` a `http://localhost:8080` (backend en Docker). Ver ADR-0006.
 
@@ -122,3 +122,4 @@ Requisitos (Docker Desktop), pasos para arrancar (`copy .env.example .env`, `doc
 - **2026-11-10:** decisión durante T5: la imagen final del backend instala `curl` (etapa 2 del Dockerfile) y el healthcheck de `docker-compose` usa `curl -f http://localhost:8080/api/health`. Resuelve el riesgo del §9 sobre el healthcheck. Sin cambio de alcance.
 - **2026-11-10:** corrección durante T5: §4.2 fija la imagen `postgres:18.6` (la misma que los tests) y monta el volumen en `/var/lib/postgresql` (requisito de PostgreSQL 18+). Sin cambio de alcance.
 - **2026-11-10:** precisión durante T7: §5 indica que el runner por defecto de Angular 22 es Vitest (vía `ng test`). Sin cambio de alcance.
+- **2026-11-10:** precisión durante T8: §3 indica que el componente principal muestra «Comprobando…» mientras llega la primera respuesta del backend. Sin cambio de alcance.
