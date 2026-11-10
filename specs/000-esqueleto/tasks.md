@@ -58,7 +58,7 @@
 
 ## Frontend
 
-- [ ] **T6 [IA] Generar el proyecto Angular**
+- [x] **T6 [IA] Generar el proyecto Angular**
   - Qué: crear el proyecto en `frontend/` con Angular CLI 22.x (standalone), según plan §3.
   - Comprobación: `cd frontend`, `npm start` y abrir `http://localhost:4200` → se ve la página por defecto de Angular.
   - Commit: `feat(frontend): genera proyecto Angular`
