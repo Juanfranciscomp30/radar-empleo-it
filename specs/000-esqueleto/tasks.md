@@ -34,7 +34,7 @@
   - Commit: `feat(backend): configura datasource y endpoint de salud`
   - Cubre: CA-2, CA-3, CA-8
 
-- [ ] **T3 [IA] Test de integración del endpoint de salud**
+- [x] **T3 [IA] Test de integración del endpoint de salud**
   - Qué: test `@SpringBootTest` con Testcontainers (PostgreSQL) que comprueba que `GET /api/health` responde `200` con estado `UP` (plan §5).
   - Comprobación: con Docker Desktop abierto, `.\mvnw verify` pasa.
   - Commit: `test(backend): test de integración de /api/health con Testcontainers`
