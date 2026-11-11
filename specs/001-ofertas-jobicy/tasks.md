@@ -1,6 +1,6 @@
 # Tareas 001: Ofertas reales de Jobicy
 
-**Estado:** Borrador · **Fecha:** 2026-11-11 · **Spec:** `spec.md` · **Plan:** `plan.md` · **Rama:** `spec/001-ofertas-jobicy`
+**Estado:** Aprobado · **Fecha:** 2026-11-11 · **Spec:** `spec.md` · **Plan:** `plan.md` · **Rama:** `spec/001-ofertas-jobicy`
 
 ## Cómo se trabaja con este fichero
 
