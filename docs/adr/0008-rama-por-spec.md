@@ -1,6 +1,6 @@
 # ADR-0008: Una rama y una pull request por spec, con `main` protegida
 
-**Estado:** Aceptado · **Fecha:** 2026-11-11 · **Relacionado:** constitución VI.4, ADR-0007
+**Estado:** Aceptado (flujo de PR actualizado por ADR-0009) · **Fecha:** 2026-11-11 · **Relacionado:** constitución VI.4, ADR-0007, ADR-0009
 
 ## Contexto
 
@@ -18,8 +18,8 @@ La constitución (VI.4) exige que GitHub Actions bloquee la entrada en `main` de
 
 - Ruleset de GitHub sobre `main`: PR obligatoria (0 aprobaciones, al ser un proyecto individual), checks `backend`, `frontend` y `docker` obligatorios, sin force push ni borrado, y **sin excepciones** (lista de bypass vacía).
 - Cada spec se trabaja en la rama `spec/NNN-nombre`, que se crea al empezar su primera tarea y se sube a GitHub.
-- La última tarea de cada spec abre la PR; el merge se hace cuando CI está en verde, con **merge commit** para conservar un commit por tarea en el historial.
-- La skill `/tarea` se actualiza para comprobar la rama y para abrir la PR.
+- La última tarea de cada spec abre la PR (*actualizado por ADR-0009: ahora la abre la skill `/pr` tras una revisión independiente*); el merge se hace cuando CI está en verde, con **merge commit** para conservar un commit por tarea en el historial.
+- La skill `/tarea` se actualiza para comprobar la rama y para abrir la PR (*actualizado por ADR-0009: `/tarea` ya no abre la PR, recomienda ejecutar `/pr`*).
 
 ## Consecuencias
 

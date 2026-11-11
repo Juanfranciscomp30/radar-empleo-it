@@ -60,6 +60,4 @@ No la implementes. Explica paso a paso qué tengo que hacer yo, cómo comprobarl
 
 Si tras marcar la tarea **ya no quedan tareas sin `[x]`** en `tasks.md`:
 
-1. Dímelo y propón abrir la PR de `spec/<carpeta>` hacia `main`, con título `Spec <NNN>: <nombre>` y una descripción que liste las tareas hechas y los criterios de aceptación.
-2. Si `gh` está instalado y autenticado, ábrela con `gh pr create` tras mi confirmación; si no, dame el enlace de GitHub para abrirla a mano.
-3. Recuérdame que el merge lo hago yo cuando CI esté en verde, usando **merge commit** (no squash), y que después vuelva a `main` con `git switch main` y `git pull`.
+Dímelo y recomiéndame ejecutar **`/pr`** (ADR-0009): revisará la rama con el subagente `revisor-spec`, abrirá la pull request, esperará a CI y hará el merge solo con mi confirmación. No abras tú la PR.
