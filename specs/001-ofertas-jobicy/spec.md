@@ -1,6 +1,6 @@
 # Spec 001: Ofertas reales de Jobicy, de la fuente a la pantalla
 
-**Estado:** Borrador · **Fecha:** 2026-11-11 · **Relacionado:** constitución v2.0.0 (III, IV, VI, VIII), ADR-0002, ADR-0003
+**Estado:** Aprobada · **Fecha:** 2026-11-11 · **Relacionado:** constitución v2.0.0 (III, IV, VI, VIII), ADR-0002, ADR-0003
 
 ## Objetivo
 
@@ -44,7 +44,7 @@ Tener la primera funcionalidad completa del radar: recoger ofertas IT reales de 
 | Aspecto | Detalle |
 |---|---|
 | Tipo de acceso | API pública JSON, sin autenticación: `GET https://jobicy.com/api/v2/remote-jobs` |
-| Condiciones revisadas | **Pendiente:** enlace a las condiciones oficiales en jobicy.com/jobs-rss-feed, revisado por mí antes de aprobar esta spec |
+| Condiciones revisadas | https://jobicy.com/jobs-rss-feed (revisadas por mí el 2026-11-11: uso permitido con atribución y uso justo) |
 | Límites de uso | Consultar unas pocas veces al día; el uso excesivo puede restringir el acceso |
 | Atribución | Citar a Jobicy con enlace y que "aplicar" lleve a la oferta original |
 | Restricciones conocidas | No redistribuir las ofertas en otros agregadores (uso personal: cumple) |
@@ -56,7 +56,7 @@ Tener la primera funcionalidad completa del radar: recoger ofertas IT reales de 
 
 ## Pasos manuales (los hago yo, no la IA)
 
-- Leer las condiciones oficiales de Jobicy y completar la fila "Condiciones revisadas" antes de aprobar la spec.
+- ~~Leer las condiciones oficiales de Jobicy y completar la fila "Condiciones revisadas" antes de aprobar la spec.~~ Hecho el 2026-11-11.
 - Hacer las capturas de pantalla del listado para el README y el post de LinkedIn.
 
 ## Preguntas abiertas
