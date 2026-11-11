@@ -1,6 +1,6 @@
 # Plan 001: Ofertas reales de Jobicy
 
-**Estado:** Borrador · **Fecha:** 2026-11-11 · **Spec:** `specs/001-ofertas-jobicy/spec.md` · **ADRs:** 0003, 0010, 0011, 0012
+**Estado:** Aprobado · **Fecha:** 2026-11-11 · **Spec:** `specs/001-ofertas-jobicy/spec.md` · **ADRs:** 0003, 0010, 0011, 0012
 
 Este documento describe **cómo** se construye la spec 001. No añade requisitos: todo sirve para cumplir algún criterio de aceptación (CA) de la spec.
 
