@@ -13,14 +13,14 @@
 
 ## Preparación
 
-- [ ] **T0 [YO] Comprobar el entorno**
+- [x] **T0 [YO] Comprobar el entorno**
   - Qué: estar en la rama `spec/001-ofertas-jobicy`, con `main` actualizado y Docker Desktop arrancado.
   - Comprobación: `git branch --show-current` muestra la rama; `docker run hello-world` funciona.
   - Commit: ninguno.
 
 ## Backend: datos
 
-- [ ] **T1 [IA] Dependencias, configuración y migración de la tabla `ofertas`**
+- [x] **T1 [IA] Dependencias, configuración y migración de la tabla `ofertas`**
   - Qué: añadir JPA y Flyway (ADR-0010, ADR-0011), configurar `ddl-auto=validate` y `open-in-view=false`, y crear `V1__crear_tabla_ofertas.sql` según plan §2.3 (restricción única e índice incluidos).
   - Comprobación:
     1. `.\mvnw verify` pasa (el test de salud sigue en verde con Flyway aplicando la migración en Testcontainers).

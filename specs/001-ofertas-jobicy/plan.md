@@ -158,3 +158,4 @@ Jobicy API ──► JobicyConector ──► IngestaService ──► PostgreSQ
 ## Historial
 
 - **2026-11-11:** versión inicial.
+- **2026-11-11:** T1 — dependencias de Spring Boot 4: `spring-boot-starter-data-jpa`, `spring-boot-starter-flyway`, `flyway-database-postgresql` (sustituye a `spring-boot-starter-jdbc`).

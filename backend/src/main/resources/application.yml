@@ -7,6 +7,14 @@ spring:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
     password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      # Flyway crea y evoluciona el esquema; Hibernate solo comprueba que las
+      # entidades coinciden con él y, si no, la aplicación no arranca (ADR-0010, ADR-0011)
+      ddl-auto: validate
+    # Sin sesión de JPA abierta durante la vista: evita consultas ocultas desde los controladores
+    open-in-view: false
+  # Flyway aplica al arrancar las migraciones de src/main/resources/db/migration (ruta por defecto)
 
 management:
   endpoints:
