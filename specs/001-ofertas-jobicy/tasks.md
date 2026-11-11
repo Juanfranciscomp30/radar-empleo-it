@@ -28,7 +28,7 @@
   - Commit: `feat(backend): tabla de ofertas con Flyway y JPA`
   - Cubre: CA-1, CA-4
 
-- [ ] **T2 [IA] Entidad `Oferta` y repositorio idempotente**
+- [x] **T2 [IA] Entidad `Oferta` y repositorio idempotente**
   - Qué: entidad `Oferta` sin relaciones y `OfertaRepository` con `insertarSiNoExiste` (`ON CONFLICT DO NOTHING`), según plan §2.4. Test con Testcontainers: insertar la misma oferta dos veces deja una sola fila.
   - Comprobación: `.\mvnw verify` pasa. Ver el test fallar quitando la restricción única de una copia temporal de la migración (y deshacerlo).
   - Commit: `feat(backend): entidad Oferta y repositorio idempotente`

@@ -159,3 +159,4 @@ Jobicy API ──► JobicyConector ──► IngestaService ──► PostgreSQ
 
 - **2026-11-11:** versión inicial.
 - **2026-11-11:** T1 — dependencias de Spring Boot 4: `spring-boot-starter-data-jpa`, `spring-boot-starter-flyway`, `flyway-database-postgresql` (sustituye a `spring-boot-starter-jdbc`).
+- **2026-11-11:** T2 — `insertarSiNoExiste` devuelve `int` (1 = insertada, 0 = ya existía), porque Spring Data solo admite `void`/`int` en consultas `@Modifying`. Los tests de repositorio usan `@DataJpaTest` con Testcontainers (`spring-boot-starter-data-jpa-test` sustituye a `spring-boot-starter-jdbc-test`).
