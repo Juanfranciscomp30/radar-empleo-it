@@ -16,7 +16,7 @@ Sigue estos pasos en orden. Si algo falla, **detente** y explica qué pasa.
 - La rama está subida y al día: `git fetch` y comprueba con `git status -sb` que no hay commits sin subir. Si los hay, propón `git push` y espera mi confirmación.
 - `gh` está instalado y con sesión iniciada: `gh auth status`. Si no, dime cómo instalarlo (`winget install GitHub.cli` y `gh auth login`) y para.
 - Si es una rama `spec/NNN-...`, localiza `specs/NNN-*/` y comprueba que todas las tareas de `tasks.md` están en `[x]`. Si falta alguna, dímelo y para.
-- Si ya existe una PR abierta para la rama (`gh pr view`), no crees otra: continúa desde el paso 4.
+- Si ya existe una PR abierta para la rama (`gh pr view`), no crees otra: repite el paso 2 (la revisión) para que los commits subidos después de abrirla también se revisen. Si el veredicto permite seguir, actualiza la descripción de la PR si ha cambiado (`gh pr edit <número> --body "..."`) y continúa desde el paso 4.
 
 ## 2. Revisión independiente
 
@@ -47,15 +47,17 @@ Ejecuta `gh pr checks <número> --watch` y espera a que terminen `backend`, `fro
 
 Pregúntame: "CI en verde. ¿Hago el merge?". **Nunca** hagas merge sin un sí explícito.
 
-Cuando confirme: `gh pr merge <número> --merge --delete-branch` (merge commit, nunca squash; ADR-0008).
+Cuando confirme: `gh pr merge <número> --merge --delete-branch` (merge commit, nunca squash; ADR-0008). `--delete-branch` borra la rama remota y la local, y cambia a `main`.
 
 ## 6. Volver a main
 
 ```
 git switch main
 git pull
-git branch -d <rama>
 git log --oneline -3
+git branch --list <rama>
 ```
+
+No hace falta `git branch -d`: `gh pr merge --delete-branch` ya ha borrado la rama local. Si `git branch --list` aún la muestra, bórrala con `git branch -d <rama>`.
 
 Enséñame el log y confírmame que la rama está fusionada.

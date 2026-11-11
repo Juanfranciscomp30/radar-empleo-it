@@ -53,3 +53,5 @@ Recibirás el nombre de la rama y, si es una rama de spec, la carpeta de la spec
 ```
 
 Usa **NO APTA** si hay secretos en el código, un CA sin cumplir, cambios fuera de alcance o una violación de la constitución.
+
+En ramas `chore/` (sin spec), deja la tabla de criterios de aceptación con una sola fila: `| No aplica | No aplica | Rama chore/: revisada solo frente a la constitución, CLAUDE.md y los ADRs. |`.
