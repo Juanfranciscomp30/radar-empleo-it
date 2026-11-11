@@ -100,12 +100,12 @@
 
 ## Cierre
 
-- [ ] **T12 [YO] Proteger la rama `main` en GitHub**
+- [x] **T12 [YO] Proteger la rama `main` en GitHub**
   - Qué: en GitHub → Settings → Branches (o Rules), exigir que el workflow de CI pase antes de hacer merge a `main`.
   - Comprobación: la regla aparece activa en la configuración del repo.
   - Commit: ninguno.
 
-- [ ] **T13 [YO] Verificación final de la spec**
+- [x] **T13 [YO] Verificación final de la spec**
   - Qué: recorrer CA-1 a CA-9 de `spec.md` uno por uno y comprobar que se cumplen. Primera tarea con el flujo del ADR-0008: se hace en la rama `spec/000-esqueleto` y entra en `main` mediante pull request.
   - Comprobación: todos los criterios cumplidos; la PR pasa CI y se hace merge.
   - Commit: cambiar el estado de `spec.md` a **Implementada** → `docs: spec 000 implementada`

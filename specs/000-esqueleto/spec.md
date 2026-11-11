@@ -1,6 +1,6 @@
 # Spec 000: Esqueleto del proyecto
 
-**Estado:** Aprobada · **Fecha:** 2026-11-09 · **Relacionado:** constitución v2.0.0, ADR-0004, ADR-0005
+**Estado:** Implementada · **Fecha:** 2026-11-09 · **Relacionado:** constitución v2.0.0, ADR-0004, ADR-0005
 
 ## Objetivo
 
