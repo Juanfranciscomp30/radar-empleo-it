@@ -22,6 +22,10 @@ El primer argumento es el número de spec (p. ej. `000`) y el segundo el identif
 - La tarea existe en `tasks.md` y **no** está marcada con `[x]`.
 - Todas las tareas anteriores están marcadas con `[x]`. Si no, avisa de cuáles faltan y pregunta si continuar.
 - `git status` está limpio. Si hay cambios sin commit, enséñalos y pregunta antes de seguir.
+- **Rama de trabajo (ADR-0008):** se trabaja en la rama `spec/<carpeta-de-la-spec>` (p. ej. `spec/001-ofertas-jobicy`), nunca en `main`.
+  - Si estoy en `main` y la rama no existe: propón crearla con `git switch -c spec/<carpeta>` a partir de un `main` actualizado (`git pull`) y espera mi confirmación.
+  - Si la rama ya existe: propón `git switch spec/<carpeta>`.
+  - Si estoy en otra rama distinta, avisa y pregunta.
 
 ## 3. Si la tarea es [YO]
 
@@ -50,4 +54,12 @@ No la implementes. Explica paso a paso qué tengo que hacer yo, cómo comprobarl
   1. Marca la tarea con `[x]` en `tasks.md`.
   2. Si acordamos correcciones del plan, aplícalas y añade una línea en su apartado "Historial".
   3. Haz `git add` de los ficheros de la tarea y de los documentos tocados, y un único commit con **exactamente** el mensaje indicado en el campo "Commit" de la tarea.
-  4. Enséñame `git log --oneline -1` y pregúntame si hago `git push`.
+  4. Enséñame `git log --oneline -1` y pregúntame si hago `git push` (la primera vez en la rama, `git push -u origin spec/<carpeta>`).
+
+## 7. Última tarea de la spec: pull request
+
+Si tras marcar la tarea **ya no quedan tareas sin `[x]`** en `tasks.md`:
+
+1. Dímelo y propón abrir la PR de `spec/<carpeta>` hacia `main`, con título `Spec <NNN>: <nombre>` y una descripción que liste las tareas hechas y los criterios de aceptación.
+2. Si `gh` está instalado y autenticado, ábrela con `gh pr create` tras mi confirmación; si no, dame el enlace de GitHub para abrirla a mano.
+3. Recuérdame que el merge lo hago yo cuando CI esté en verde, usando **merge commit** (no squash), y que después vuelva a `main` con `git switch main` y `git pull`.

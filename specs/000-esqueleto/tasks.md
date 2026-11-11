@@ -106,6 +106,6 @@
   - Commit: ninguno.
 
 - [ ] **T13 [YO] Verificación final de la spec**
-  - Qué: recorrer CA-1 a CA-9 de `spec.md` uno por uno y comprobar que se cumplen.
-  - Comprobación: todos los criterios cumplidos.
+  - Qué: recorrer CA-1 a CA-9 de `spec.md` uno por uno y comprobar que se cumplen. Primera tarea con el flujo del ADR-0008: se hace en la rama `spec/000-esqueleto` y entra en `main` mediante pull request.
+  - Comprobación: todos los criterios cumplidos; la PR pasa CI y se hace merge.
   - Commit: cambiar el estado de `spec.md` a **Implementada** → `docs: spec 000 implementada`
