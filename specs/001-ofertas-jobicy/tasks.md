@@ -36,7 +36,7 @@
 
 ## Backend: conectores e ingesta
 
-- [ ] **T3 [IA] Arquitectura de conectores e `IngestaService`**
+- [x] **T3 [IA] Arquitectura de conectores e `IngestaService`**
   - Qué: interfaz `Conector`, record `OfertaNormalizada` e `IngestaService` con `try/catch` por conector y resumen por fuente, según plan §2.2 y §2.6. Test con Mockito: un conector que falla no impide guardar las ofertas de otro.
   - Comprobación: `.\mvnw verify` pasa.
   - Commit: `feat(backend): arquitectura de conectores e IngestaService`
