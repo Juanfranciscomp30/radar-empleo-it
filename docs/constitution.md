@@ -1,6 +1,6 @@
 # Constitución — Radar de Empleo IT
 
-**Versión:** 2.0.0 · **Fecha:** 2026-11-09 · **Estado:** vigente
+**Versión:** 3.0.0 · **Fecha:** 2026-11-16 · **Estado:** vigente
 
 Este documento recoge los principios no negociables del proyecto. Toda spec, plan y línea de código debe respetarlos. Cambiarlos requiere un ADR y subir la versión.
 
@@ -65,8 +65,9 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 ## VIII. Alcance y plazos
 
 - **MVP en 2 semanas como máximo** (fecha límite: 2026-11-23).
-- **Dentro del MVP:** 2–3 conectores, puntuación con IA, listado de ofertas con filtros y orden por encaje.
-- **Fuera del MVP:** cuentas de usuario, despliegue en la nube, notificaciones, conectores adicionales.
+- **Dentro del MVP** (ADR-0013): un conector (Jobicy), listado de ofertas, puntuación de encaje con IA y orden del listado por encaje.
+- **Fase 2 (después del MVP):** conector de InfoJobs y otros, deduplicación entre fuentes (III.4), filtros y búsqueda.
+- **Fuera del MVP y de la fase 2:** cuentas de usuario, despliegue en la nube y notificaciones.
 - Ante la duda, se recorta alcance antes que mover la fecha.
 
 ## IX. Demo y portfolio
@@ -81,5 +82,6 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 
 ## Historial
 
+- **3.0.0** (2026-11-16): el principio VIII se redefine; el MVP se recorta a un conector (Jobicy) + puntuación con IA, e InfoJobs, deduplicación y filtros pasan a la fase 2 (ADR-0013).
 - **2.0.0** (2026-11-09): el principio IV se redefine; se eliminan los conectores restringidos y solo se admiten fuentes con acceso automatizado permitido (ADR-0002).
 - **1.0.0** (2026-11-09): versión inicial.
