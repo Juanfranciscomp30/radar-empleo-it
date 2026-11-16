@@ -30,7 +30,7 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 1. Cada fuente de ofertas es un **conector** que implementa una interfaz común y devuelve ofertas en un modelo normalizado.
 2. Cada conector se activa o desactiva por configuración, sin tocar código del núcleo.
 3. El fallo de un conector nunca detiene la ingesta de los demás.
-4. Las ofertas se deduplican entre fuentes.
+4. Las ofertas se deduplican entre fuentes *(se aplica desde el segundo conector; fase 2, ADR-0013)*.
 
 ## IV. Política de fuentes: 100 % legal
 

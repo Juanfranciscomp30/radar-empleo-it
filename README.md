@@ -167,11 +167,18 @@ radar-empleo-it/
   - [x] Frontend Angular con página de estado, servido con nginx
   - [x] CI con GitHub Actions
   - [x] README con instrucciones de arranque
+### MVP (23/11)
+
 - [ ] **Spec 001:** modelo de oferta normalizado y primer conector (Jobicy)
-- [ ] Conector InfoJobs (API oficial) y deduplicación entre fuentes
 - [ ] Puntuación de encaje con IA, con explicación de motivos
-- [ ] Listado de ofertas con filtros y orden por encaje
+- [ ] Listado de ofertas ordenado por encaje
 - [ ] Demo en vídeo
+
+### Fase 2
+
+- [ ] Conector InfoJobs (API oficial) y otros conectores
+- [ ] Deduplicación entre fuentes
+- [ ] Filtros y búsqueda en el listado
 
 ## 👤 Autor
 

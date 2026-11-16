@@ -4,7 +4,7 @@
 
 ## Contexto
 
-La constitución (principio IV, ADR-0002) solo admite fuentes que permiten acceso automatizado. El MVP (principio VIII) limita a 2–3 conectores. Se evaluaron: Adzuna, InfoJobs, Jooble, Jobicy, Remotive y Arbeitnow.
+La constitución (principio IV, ADR-0002) solo admite fuentes que permiten acceso automatizado. El MVP (principio VIII) limita a 2–3 conectores *(ADR-0013: el MVP pasa a 1 conector)*. Se evaluaron: Adzuna, InfoJobs, Jooble, Jobicy, Remotive y Arbeitnow.
 
 Hallazgos tras intentar el registro (2026-11-09):
 - **Adzuna** no es gratuita: la cuenta gratuita da 25 llamadas de prueba; el acceso real cuesta 8 £/mes (5.000 llamadas/mes, 500/día).

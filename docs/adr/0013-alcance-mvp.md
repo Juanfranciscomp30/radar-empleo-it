@@ -4,7 +4,7 @@
 
 ## Contexto
 
-La constitución (VIII) fija el MVP para el **2026-11-23** e incluía: 2–3 conectores, puntuación con IA y listado con filtros y orden por encaje. A 2026-11-16 está terminada la spec 000 y la spec 001 va por la T2 de 12.
+La constitución (VIII) fija el MVP para el **2026-11-23** e incluía: 2–3 conectores, puntuación con IA y listado con filtros y orden por encaje. A 2026-11-16 está terminada la spec 000 y la spec 001 va por la T2 de 13 (T0–T12).
 
 Estimación del trabajo pendiente (basada en el ritmo real de las specs 000 y 001):
 
