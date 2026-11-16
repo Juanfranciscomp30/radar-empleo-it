@@ -82,6 +82,6 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 
 ## Historial
 
-- **3.0.0** (2026-11-16): el principio VIII se redefine; el MVP se recorta a un conector (Jobicy) + puntuación con IA, e InfoJobs, deduplicación y filtros pasan a la fase 2 (ADR-0013).
+- **3.0.0** (2026-11-16): el principio VIII se redefine; el MVP se recorta a un conector (Jobicy) + puntuación con IA, e InfoJobs, deduplicación y filtros pasan a la fase 2; se anota III.4 (ADR-0013).
 - **2.0.0** (2026-11-09): el principio IV se redefine; se eliminan los conectores restringidos y solo se admiten fuentes con acceso automatizado permitido (ADR-0002).
 - **1.0.0** (2026-11-09): versión inicial.

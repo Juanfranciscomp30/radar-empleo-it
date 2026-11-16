@@ -1,6 +1,6 @@
 # ADR-0013: Alcance del MVP recortado para mantener la fecha
 
-**Estado:** Aceptado · **Fecha:** 2026-11-16 · **Modifica:** constitución VIII (v3.0.0), ADR-0003
+**Estado:** Aceptado · **Fecha:** 2026-11-16 · **Modifica:** constitución VIII (v3.0.0) y III.4 (anotación), ADR-0003
 
 ## Contexto
 

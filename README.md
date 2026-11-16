@@ -161,12 +161,13 @@ radar-empleo-it/
 
 ## 🗺️ Roadmap
 
-- [ ] **Spec 000: esqueleto**
+- [x] **Spec 000: esqueleto**
   - [x] Backend con endpoint de salud y test de integración
   - [x] Docker Compose con PostgreSQL y backend
   - [x] Frontend Angular con página de estado, servido con nginx
   - [x] CI con GitHub Actions
   - [x] README con instrucciones de arranque
+
 ### MVP (23/11)
 
 - [ ] **Spec 001:** modelo de oferta normalizado y primer conector (Jobicy)
