@@ -1,10 +1,10 @@
 # ADR-0003: Fuentes de ofertas del MVP
 
-**Estado:** Aceptado (revisado) · **Fecha:** 2026-11-09
+**Estado:** Aceptado (revisado; calendario actualizado por ADR-0013) · **Fecha:** 2026-11-09
 
 ## Contexto
 
-La constitución (principio IV, ADR-0002) solo admite fuentes que permiten acceso automatizado. El MVP (principio VIII) limita a 2–3 conectores. Se evaluaron: Adzuna, InfoJobs, Jooble, Jobicy, Remotive y Arbeitnow.
+La constitución (principio IV, ADR-0002) solo admite fuentes que permiten acceso automatizado. El MVP (principio VIII) limita a 2–3 conectores *(ADR-0013: el MVP pasa a 1 conector)*. Se evaluaron: Adzuna, InfoJobs, Jooble, Jobicy, Remotive y Arbeitnow.
 
 Hallazgos tras intentar el registro (2026-11-09):
 - **Adzuna** no es gratuita: la cuenta gratuita da 25 llamadas de prueba; el acceso real cuesta 8 £/mes (5.000 llamadas/mes, 500/día).
@@ -13,7 +13,7 @@ Hallazgos tras intentar el registro (2026-11-09):
 ## Decisión
 
 1. **Jobicy** (API/feed público sin key) es el **primer conector**: valida la arquitectura de conectores sin coste ni autenticación. Exige atribución con enlace y que "aplicar" lleve a la oferta original.
-2. **InfoJobs** (API REST oficial): segundo conector, fuente principal de ofertas en España.
+2. **InfoJobs** (API REST oficial): segundo conector, fuente principal de ofertas en España. *(Actualizado por ADR-0013: pasa a la fase 2, después del MVP.)*
 3. **Adzuna**: decisión de pago aplazada. Si InfoJobs no resulta suficiente, se valora pagarla. Las 25 llamadas de prueba se reservan para capturar respuestas reales como fixtures de tests.
 
 **Plan B:** Remotive como fuente adicional gratuita.
