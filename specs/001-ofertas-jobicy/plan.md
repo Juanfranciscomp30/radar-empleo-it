@@ -65,9 +65,12 @@ Jobicy API ──► JobicyConector ──► IngestaService ──► PostgreSQ
 ### 2.5 Conector de Jobicy (CA-2, CA-5, spec "Fuente")
 
 - Cliente HTTP: **`RestClient`** de Spring (síncrono, sin dependencias nuevas), con timeouts (conexión 5 s, lectura 15 s).
-- **Una sola llamada por ingesta**: `GET /api/v2/remote-jobs?count=100&industry=<slug de desarrollo>`.
+- **Una sola llamada por ingesta**: `GET /api/v2/remote-jobs?count=100&industry=engineering` (slug de "Software Engineering"; en la respuesta real también incluye ofertas de "QA & Testing").
 - Filtro de región **en local**: se quedan las ofertas cuyo campo de región incluya España, Europa, EMEA o "cualquier ubicación" (CA-2). Así se hace 1 llamada por ingesta, no una por región.
-- Los **slugs y nombres de campos exactos** se comprueban una vez contra la API real (taxonomía `?get=industries` y `?get=locations`) al implementar, y la respuesta real se guarda como *fixture* de tests.
+  - Campo: `jobGeo`, **texto** con una o varias regiones separadas por comas (p. ej. `"Germany,  Ireland,  Spain,  UK"`, con espacios irregulares).
+  - Valores aceptados (nombres de la taxonomía, sin distinguir mayúsculas): `Spain`, `Europe`, `EMEA`, `Anywhere`. Se separa por comas y se compara cada región recortada, no por subcadena.
+- Los **slugs y nombres de campos exactos** se comprobaron contra la API real el 2026-11-20 (T4). *Fixtures* en `backend/src/test/resources/fixtures/jobicy/`: `industries.json`, `locations.json` y `remote-jobs-engineering.json` (100 ofertas).
+- Campos de cada oferta (dentro de `jobs`): `id` (número), `url`, `jobTitle`, `companyName`, `jobGeo`, `pubDate` (ISO-8601 con zona), `jobType` (**lista**), `jobLevel` (texto, p. ej. `Senior`, `Any`), `jobDescription` (HTML) y, opcionales, `salaryMin`, `salaryMax`, `salaryCurrency`, `salaryPeriod`. Se ignoran `jobSlug`, `companyLogo`, `jobIndustry` y `jobExcerpt`.
 - Mapeo de la respuesta de Jobicy a `OfertaNormalizada`; ofertas sin `id`, `url` o título se descartan y se registran en el log.
 - Configuración (`application.yml`, con valores por defecto):
   - `radar.conectores.jobicy.habilitado=true`
@@ -161,3 +164,4 @@ Jobicy API ──► JobicyConector ──► IngestaService ──► PostgreSQ
 - **2026-11-11:** T1 — dependencias de Spring Boot 4: `spring-boot-starter-data-jpa`, `spring-boot-starter-flyway`, `flyway-database-postgresql` (sustituye a `spring-boot-starter-jdbc`).
 - **2026-11-11:** T2 — `insertarSiNoExiste` devuelve `int` (1 = insertada, 0 = ya existía), porque Spring Data solo admite `void`/`int` en consultas `@Modifying`. Los tests de repositorio usan `@DataJpaTest` con Testcontainers (`spring-boot-starter-data-jpa-test` sustituye a `spring-boot-starter-jdbc-test`).
 - **2026-11-16:** T3 — `OfertaNormalizada` no lleva `fuente`: la pone `IngestaService` a partir de `Conector.fuente()`, para que un conector no pueda guardar ofertas a nombre de otra fuente. El `try/catch` por conector cubre la descarga **y** el guardado: un fallo de la base de datos a mitad de un conector cierra su resumen con error y la ingesta sigue con los demás. El resumen por fuente es el record `ResumenIngesta(fuente, nuevas, existentes, error)`.
+- **2026-11-20:** T4 — consultada la API real una vez (taxonomía y listado) y guardados los *fixtures*. Slug de industria: `engineering`. Regiones aceptadas en `jobGeo`: `Spain`, `Europe`, `EMEA`, `Anywhere` (texto separado por comas). `jobType` es una lista; los campos de salario pueden faltar. En el fixture, 9 de 100 ofertas pasan el filtro de región.

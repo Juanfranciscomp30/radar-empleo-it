@@ -42,7 +42,7 @@
   - Commit: `feat(backend): arquitectura de conectores e IngestaService`
   - Cubre: CA-1, CA-5, CA-11
 
-- [ ] **T4 [IA] Capturar la respuesta real de Jobicy como fixture**
+- [x] **T4 [IA] Capturar la respuesta real de Jobicy como fixture**
   - Qué: consultar **una vez** la taxonomía (`?get=industries` y `?get=locations`) y el listado de ofertas de la API real, guardar las respuestas en `backend/src/test/resources/fixtures/jobicy/` y anotar en el plan (§2.5 e Historial) el slug de industria y los valores de región que se usarán. Son las únicas llamadas reales a Jobicy durante el desarrollo.
   - Comprobación: los ficheros de fixture existen y el plan indica los slugs elegidos.
   - Commit: `test(backend): fixtures reales de la API de Jobicy`
