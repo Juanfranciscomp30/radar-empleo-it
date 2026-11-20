@@ -16,6 +16,15 @@ spring:
     open-in-view: false
   # Flyway aplica al arrancar las migraciones de src/main/resources/db/migration (ruta por defecto)
 
+radar:
+  conectores:
+    jobicy:
+      # Activa o desactiva el conector sin tocar código (constitución III.2, CA-10)
+      habilitado: true
+      url: https://jobicy.com/api/v2/remote-jobs
+      # Ofertas por ingesta; se hace una sola llamada (uso justo de Jobicy)
+      cantidad: 100
+
 management:
   endpoints:
     web:

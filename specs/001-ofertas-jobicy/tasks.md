@@ -48,7 +48,7 @@
   - Commit: `test(backend): fixtures reales de la API de Jobicy`
   - Cubre: CA-2, CA-11
 
-- [ ] **T5 [IA] Conector de Jobicy**
+- [x] **T5 [IA] Conector de Jobicy**
   - Qué: `JobicyConector` con `RestClient`, timeouts, una llamada por ingesta, filtro de región en local, mapeo a `OfertaNormalizada`, descarte de ofertas incompletas y activación por configuración, según plan §2.5. Tests con `MockRestServiceServer` y el fixture: mapeo, filtro de región, descarte, error HTTP, timeout y JSON inválido.
   - Comprobación: `.\mvnw verify` pasa sin conexión a internet.
   - Commit: `feat(backend): conector de Jobicy`
