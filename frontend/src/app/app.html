@@ -1,12 +1,37 @@
-<h1>Radar de Empleo IT</h1>
+<header class="cabecera">
+  <div class="contenedor cabecera__contenido">
+    <h1 class="cabecera__titulo">Radar de Empleo IT</h1>
+    <p class="cabecera__estado">
+      Estado del backend:
+      <strong
+        class="status"
+        [class.status--ok]="backendUp() === true"
+        [class.status--error]="backendUp() === false"
+      >
+        @switch (backendUp()) {
+          @case (true) {
+            Conectado
+          }
+          @case (false) {
+            Sin conexión
+          }
+          @default {
+            Comprobando…
+          }
+        }
+      </strong>
+    </p>
+  </div>
+</header>
 
-<p>
-  Estado del backend:
-  <strong class="status">
-    @switch (backendUp()) {
-      @case (true) { Conectado }
-      @case (false) { Sin conexión }
-      @default { Comprobando… }
-    }
-  </strong>
-</p>
+<main class="contenedor">
+  <app-listado-ofertas />
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <!-- Atribución exigida por Jobicy (spec 001, CA-9) -->
+    Ofertas remotas de
+    <a href="https://jobicy.com" target="_blank" rel="noopener noreferrer">Jobicy</a>
+  </div>
+</footer>

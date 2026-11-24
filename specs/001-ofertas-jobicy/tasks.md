@@ -80,7 +80,7 @@
   - Commit: `feat(frontend): servicio de ofertas y antigüedad relativa`
   - Cubre: CA-7, CA-11
 
-- [ ] **T9 [IA] Listado de ofertas en tarjetas**
+- [x] **T9 [IA] Listado de ofertas en tarjetas**
   - Qué: componente de listado con estados de carga, vacío y error; tarjetas con "Ver oferta" (`target="_blank" rel="noopener noreferrer"`); paginación Anterior/Siguiente; cabecera con el indicador de estado; pie con la atribución a Jobicy; estilos propios según plan §3. Tests del componente.
   - Comprobación:
     1. `npx ng test --watch=false` pasa.

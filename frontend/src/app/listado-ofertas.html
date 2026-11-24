@@ -1,0 +1,60 @@
+@switch (estado()) {
+  @case ('cargando') {
+    <p class="aviso" role="status">Cargando ofertas…</p>
+  }
+  @case ('error') {
+    <p class="aviso aviso--error" role="alert">
+      No se ha podido conectar con el servidor. Inténtalo de nuevo en unos minutos.
+    </p>
+  }
+  @case ('listo') {
+    @if (resultado(); as r) {
+      @if (r.contenido.length === 0) {
+        <p class="aviso vacio">
+          Todavía no hay ofertas. La primera recogida de ofertas puede tardar unos minutos.
+        </p>
+      } @else {
+        <ul class="rejilla">
+          @for (oferta of r.contenido; track oferta.id) {
+            <li class="tarjeta">
+              <h2 class="tarjeta__titulo">{{ oferta.titulo }}</h2>
+              <p class="tarjeta__empresa">{{ oferta.empresa ?? 'Empresa no indicada' }}</p>
+              <p class="tarjeta__meta">
+                <span class="tarjeta__ubicacion">{{
+                  oferta.ubicacion ?? 'Ubicación no indicada'
+                }}</span>
+                <time class="tarjeta__antiguedad" [attr.datetime]="oferta.fechaPublicacion">
+                  {{ antiguedad(oferta.fechaPublicacion) }}
+                </time>
+              </p>
+              <!-- Angular sanea [href]: una URL peligrosa (p. ej. javascript:) nunca se ejecuta -->
+              <a class="boton" [href]="oferta.url" target="_blank" rel="noopener noreferrer">
+                Ver oferta
+              </a>
+            </li>
+          }
+        </ul>
+
+        <nav class="paginacion" aria-label="Paginación">
+          <button
+            type="button"
+            class="boton boton--secundario"
+            [disabled]="!hayAnterior()"
+            (click)="anterior()"
+          >
+            Anterior
+          </button>
+          <span class="paginacion__estado">Página {{ r.pagina + 1 }} de {{ r.totalPaginas }}</span>
+          <button
+            type="button"
+            class="boton boton--secundario"
+            [disabled]="!haySiguiente()"
+            (click)="siguiente()"
+          >
+            Siguiente
+          </button>
+        </nav>
+      }
+    }
+  }
+}

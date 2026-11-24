@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { HealthService } from './health.service';
+import { ListadoOfertas } from './listado-ofertas';
 
 @Component({
-  imports: [],
+  imports: [ListadoOfertas],
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
