@@ -66,7 +66,7 @@
 
 ## Backend: API
 
-- [ ] **T7 [IA] `GET /api/ofertas` paginado**
+- [x] **T7 [IA] `GET /api/ofertas` paginado**
   - Qué: `OfertaService`, `OfertaController` y DTOs de respuesta según plan §2.7. Test de integración con Testcontainers: orden descendente y paginación.
   - Comprobación: `.\mvnw verify` pasa; con el sistema levantado, `http://localhost:8080/api/ofertas?pagina=0&tamano=5` devuelve 5 ofertas, de la más reciente a la más antigua.
   - Commit: `feat(backend): API paginada de ofertas`
