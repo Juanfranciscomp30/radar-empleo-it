@@ -1,6 +1,6 @@
 # ADR-0014: Cierre del MVP como v0.1.0 y puntuación con IA en la v0.2.0
 
-**Estado:** Aceptado · **Fecha:** 2026-11-24 · **Modifica:** constitución VIII (v4.0.0), ADR-0013
+**Estado:** Aceptado · **Fecha:** 2026-11-24 · **Modifica:** constitución VIII (v4.0.0) e IX.1 (aclaración), ADR-0013
 
 ## Contexto
 
@@ -33,5 +33,6 @@ Hasta ahora el proyecto no tenía versiones: no había forma de señalar qué es
 - **Positivas:** hay un estado del proyecto cerrado, funcional y enseñable (v0.1.0). La IA conserva una fecha concreta y se hace con el flujo completo (spec y ADR de proveedor). Los tags y releases dan un historial claro para el portfolio.
 - **Negativas:** el MVP llega sin la funcionalidad que da sentido al proyecto (la puntuación con IA), y se cerró un día tarde respecto a la fecha del ADR-0013.
 - **Constitución:** sube a **v4.0.0** (se redefine el principio VIII).
+- **Constitución IX.1:** decía "Durante el MVP la app se ejecuta en local con Docker Compose". Con el MVP cerrado, ese plazo ya no sirve; se aclara como "Hasta que un ADR decida lo contrario, la app se ejecuta en local con Docker Compose". No cambia el criterio: el despliegue en la nube sigue fuera de alcance por ahora (VIII).
 - **ADR-0013:** su alcance del MVP queda sustituido por este ADR; el reparto de la fase 2 se mantiene.
 - **Pendiente:** crear el tag `v0.1.0` y su release en GitHub tras fusionar este cambio.

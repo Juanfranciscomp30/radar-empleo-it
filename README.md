@@ -215,13 +215,16 @@ radar-empleo-it/
 
 - [ ] Puntuación de encaje con IA, con explicación de motivos
 - [ ] Listado de ofertas ordenado por encaje
-- [ ] Demo en vídeo
 
 ### Fase 2
 
 - [ ] Conector InfoJobs (API oficial) y otros conectores
 - [ ] Deduplicación entre fuentes
 - [ ] Filtros y búsqueda en el listado
+
+### Portfolio
+
+- [ ] Demo en vídeo (constitución IX.2), prevista después de la v0.2.0
 
 ## 👤 Autor
 
