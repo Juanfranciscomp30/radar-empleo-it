@@ -74,7 +74,7 @@
 
 ## Frontend
 
-- [ ] **T8 [IA] `OfertasService` y antigüedad relativa**
+- [x] **T8 [IA] `OfertasService` y antigüedad relativa**
   - Qué: servicio que consume `/api/ofertas` y función pura de antigüedad relativa con `Intl.RelativeTimeFormat('es')`, según plan §3. Tests de ambos.
   - Comprobación: `npx ng test --watch=false` pasa. Ver fallar el test de antigüedad cambiando un resultado esperado (y deshacerlo).
   - Commit: `feat(frontend): servicio de ofertas y antigüedad relativa`
