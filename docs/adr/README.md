@@ -7,7 +7,7 @@ Cada decisión de arquitectura o de proceso se registra aquí como un ADR (*Arch
 - **Numeración:** `NNNN-titulo-corto.md`, correlativa; un número nunca se reutiliza.
 - **Estados:** *Propuesto* → *Aceptado*. Un ADR aceptado no se borra: si otro lo cambia, su estado lo indica entre paréntesis (p. ej. "sustituido por ADR-NNNN") y el nuevo ADR lo enlaza.
 - **Constitución:** cambiar un principio exige un ADR y subir su versión (ver "Gobierno" en [`../constitution.md`](../constitution.md)).
-- **Este índice** se actualiza en el mismo commit que añade un ADR o cambia su estado.
+- **Este índice:** conviene actualizar este índice en el mismo commit que añade o cambia un ADR.
 
 ## Índice
 
