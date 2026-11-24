@@ -33,7 +33,8 @@ import com.juanfran.radar.conectores.OfertaNormalizada;
  * Tests de {@link JobicyConector} con respuestas simuladas (spec 001, CA-1, CA-2, CA-5 y CA-11).
  *
  * {@link MockRestServiceServer} sustituye al servidor de Jobicy: <b>no se llama a internet</b>.
- * El caso principal usa la respuesta real capturada en T4 ({@code fixtures/jobicy/}).
+ * El caso principal usa la respuesta real capturada en T4 ({@code fixtures/jobicy/}), recortada a
+ * 12 ofertas y con las descripciones abreviadas para no redistribuir el contenido de Jobicy.
  */
 class JobicyConectorTests {
 
@@ -71,10 +72,10 @@ class JobicyConectorTests {
 
 		List<OfertaNormalizada> ofertas = conector.descargar();
 
-		// De las 100 ofertas del fixture, solo estas tienen Spain, Europe o Anywhere en jobGeo
+		// De las 12 ofertas del fixture, solo estas tienen Spain, Europe, EMEA o Anywhere en jobGeo.
+		// Se descartan USA, "Canada, USA", LATAM, Germany y una lista de países europeos sin Spain
 		assertThat(ofertas).extracting(OfertaNormalizada::idExterno)
-			.containsExactly("155959", "163233", "155928", "155939", "155936", "155893", "163116", "163106",
-					"155731");
+			.containsExactly("155959", "163233", "155928", "155936", "155893", "163116", "163106");
 	}
 
 	@Test
