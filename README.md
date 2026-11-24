@@ -69,6 +69,12 @@ flowchart LR
 
 Si Jobicy falla o no responde, el error queda en el log y la web sigue mostrando lo ya guardado.
 
+<p align="center">
+  <img src="docs/img/listado-escritorio.png" alt="Listado de ofertas en escritorio: tarjetas en tres columnas con título, empresa, ubicación, antigüedad y botón Ver oferta" width="640">
+  &nbsp;
+  <img src="docs/img/listado-movil.png" alt="Listado de ofertas en móvil: tarjetas en una columna" width="200">
+</p>
+
 ## 🛠️ Stack
 
 | Capa | Tecnología |

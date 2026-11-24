@@ -100,7 +100,7 @@
 
 ## Cierre
 
-- [ ] **T11 [YO] Capturas de pantalla**
+- [x] **T11 [YO] Capturas de pantalla**
   - Qué: hacer 1–2 capturas del listado (escritorio y, si quiero, móvil), guardarlas en `docs/img/` y enlazarlas en el README.
   - Comprobación: las imágenes se ven en el README en GitHub (después del merge).
   - Commit: `docs: capturas del listado de ofertas`
