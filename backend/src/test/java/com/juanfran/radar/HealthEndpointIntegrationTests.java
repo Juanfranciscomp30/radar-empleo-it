@@ -13,9 +13,10 @@ import org.springframework.test.web.servlet.client.RestTestClient;
  *
  * Arranca la aplicación completa en un puerto aleatorio, conectada a un PostgreSQL
  * real levantado con Testcontainers, y hace una petición HTTP real a /api/health.
+ * La ingesta al arrancar se desactiva para no llamar a Jobicy desde los tests (spec 001, CA-11).
  */
 @Import(TestcontainersConfiguration.class)
-@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT, properties = "radar.ingesta.al-arrancar=false")
 @AutoConfigureRestTestClient
 class HealthEndpointIntegrationTests {
 

@@ -1,0 +1,265 @@
+{
+  "apiVersion": "2.2.22",
+  "documentationUrl": "https://jobi.cy/apidocs",
+  "friendlyNotice": "Thanks for using Jobicy API! Please ensure Jobicy is clearly credited with a direct link to the source, and all application buttons redirect to the original job URL provided in this feed. That’s all! You might be building something amazing, we wish you the best of luck!",
+  "jobCount": 12,
+  "lastUpdate": "2026-11-20T08:26:02+00:00",
+  "nextCursor": "AgAAAABrAC7UAAAAAGr9JTsAAAAAAAJgU00zVhQkI8JYfGeOL2bNeSwvpjGOV7-iA1vhuPyR3yEvfkesgSaHAOB1Q1Xe8L6kgfXnA1YF7R1P1_a0kmgqB5A",
+  "hasMore": true,
+  "appliedFilters": {
+    "count": 100,
+    "industry": "engineering"
+  },
+  "jobs": [
+    {
+      "id": 163435,
+      "url": "https://jobicy.com/jobs/163435-android-engineer-2",
+      "jobSlug": "163435-android-engineer-2",
+      "jobTitle": "Android Engineer",
+      "companyName": "Branch",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2021/10/3b9dc47a09a30846e3c1355b50098b18.jpg",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "USA",
+      "jobLevel": "Any",
+      "jobExcerpt": "About us: Branch is on a mission to empower workers with financial freedom. We do this by helping co&hellip;",
+      "jobDescription": "<p><strong>About us:</strong></p>\n<p><a href=\"https://jobicy.com/company/branch\" target=\"_blank\" rel=\"noopener\">Branch</a> is on a mission to empower workers wi […]",
+      "pubDate": "2026-11-20T08:26:02+00:00",
+      "salaryMin": 145000,
+      "salaryMax": 155000,
+      "salaryCurrency": "USD",
+      "salaryPeriod": "yearly"
+    },
+    {
+      "id": 156055,
+      "url": "https://jobicy.com/jobs/156055-manager-engineering-frontend",
+      "jobSlug": "156055-manager-engineering-frontend",
+      "jobTitle": "Manager, Engineering - Frontend",
+      "companyName": "Wrapbook",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2024/03/4daf69c7-221.jpeg",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Canada,  USA",
+      "jobLevel": "Any",
+      "jobExcerpt": "About Us: Wrapbook is the AI platform for production finance. We’re building a system of action that&hellip;",
+      "jobDescription": "<p><strong>About Us:</strong></p>\n<p>Wrapbook is the AI platform for production finance. We’re building a system of action that puts finance teams in control of […]",
+      "pubDate": "2026-11-20T03:30:19+00:00",
+      "salaryMin": 206000,
+      "salaryMax": 283500,
+      "salaryCurrency": "USD",
+      "salaryPeriod": "yearly"
+    },
+    {
+      "id": 155959,
+      "url": "https://jobicy.com/jobs/155959-engineering-manager-compose",
+      "jobSlug": "155959-engineering-manager-compose",
+      "jobTitle": "Engineering Manager, Compose",
+      "companyName": "Mural",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/01/9b6f1383-221.jpeg",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Spain,  UK,  USA",
+      "jobLevel": "Senior",
+      "jobExcerpt": "ABOUT THE TEAM The Mural Compose team is ambitious and fast-moving. We are passionate builders who l&hellip;",
+      "jobDescription": "</p>\n<h3>ABOUT THE TEAM</h3>\n<p>The Mural Compose team is ambitious and fast-moving. We are passionate builders who love to experiment and iterate. Our project  […]",
+      "pubDate": "2026-11-20T03:20:19+00:00",
+      "salaryMin": 176645,
+      "salaryMax": 252350,
+      "salaryCurrency": "USD",
+      "salaryPeriod": "yearly"
+    },
+    {
+      "id": 153573,
+      "url": "https://jobicy.com/jobs/153573-ads-quality-rater-german-germany",
+      "jobSlug": "153573-ads-quality-rater-german-germany",
+      "jobTitle": "Ads Quality Rater - German (Germany)",
+      "companyName": "Welo Global",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/06/83c40f94-221.webp",
+      "jobIndustry": [
+        "QA & Testing"
+      ],
+      "jobType": [
+        "Contract"
+      ],
+      "jobGeo": "Germany",
+      "jobLevel": "Any",
+      "jobExcerpt": "Ads Quality Rater Welo Data is an award-winning localization and data transformation company. We run&hellip;",
+      "jobDescription": "<p><strong>Ads Quality Rater </strong></p>\n<p><strong>Welo Data </strong>is an award-winning localization and data transformation company. We run one of the wor […]",
+      "pubDate": "2026-11-20T03:15:19+00:00"
+    },
+    {
+      "id": 163347,
+      "url": "https://jobicy.com/jobs/163347-tech-lead-manager-mid-market-celebrity-latam",
+      "jobSlug": "163347-tech-lead-manager-mid-market-celebrity-latam",
+      "jobTitle": "Tech Lead Manager, Mid Market & Celebrity - LATAM",
+      "companyName": "Luxury Presence",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2022/05/f2b241fb769140fff2f70e8efaf5c0ff.jpg",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "LATAM",
+      "jobLevel": "Senior",
+      "jobExcerpt": "Luxury Presence is building the AI growth platform for real estate. Backed by Bessemer Venture Partn&hellip;",
+      "jobDescription": "<p><strong><a href=\"https://jobicy.com/company/luxury-presence\" target=\"_blank\" rel=\"noopener\">Luxury Presence</a> </strong>is building the AI growth platform f […]",
+      "pubDate": "2026-11-19T15:33:34+00:00"
+    },
+    {
+      "id": 163233,
+      "url": "https://jobicy.com/jobs/163233-sip-expert",
+      "jobSlug": "163233-sip-expert",
+      "jobTitle": "SIP Expert",
+      "companyName": "Elevenlabs",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/e01b4c5d-221.png",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Europe",
+      "jobLevel": "Senior",
+      "jobExcerpt": "About ElevenLabs ElevenLabs is an AI research and product company transforming how we interact with &hellip;",
+      "jobDescription": "<h3>About <a href=\"https://jobicy.com/company/elevenlabs\" target=\"_blank\" rel=\"noopener\">ElevenLabs</a></h3>\n<p>ElevenLabs is an AI research and product company […]",
+      "pubDate": "2026-11-19T09:33:24+00:00"
+    },
+    {
+      "id": 155928,
+      "url": "https://jobicy.com/jobs/155928-senior-software-development-engineer-in-test-sdet-2",
+      "jobSlug": "155928-senior-software-development-engineer-in-test-sdet-2",
+      "jobTitle": "Senior Software Development Engineer in Test (SDET)",
+      "companyName": "Flex",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/7bfdefe3-221.jpeg",
+      "jobIndustry": [
+        "QA & Testing"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Anywhere",
+      "jobLevel": "Senior",
+      "jobExcerpt": "Flex is a growth-stage, NYC headquartered FinTech company that is building the payment layer for lif&hellip;",
+      "jobDescription": "<p>Flex is a growth-stage, NYC headquartered FinTech company that is building the payment layer for life's essential bills, giving households one place to see,  […]",
+      "pubDate": "2026-11-19T03:35:04+00:00",
+      "salaryMin": 115600,
+      "salaryMax": 170000,
+      "salaryCurrency": "USD",
+      "salaryPeriod": "yearly"
+    },
+    {
+      "id": 155936,
+      "url": "https://jobicy.com/jobs/155936-developer-experience-engineer",
+      "jobSlug": "155936-developer-experience-engineer",
+      "jobTitle": "Developer Experience Engineer",
+      "companyName": "Elevenlabs",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/e01b4c5d-221.png",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Europe,  USA",
+      "jobLevel": "Any",
+      "jobExcerpt": "About ElevenLabs ElevenLabs is an AI research and product company transforming how we interact with &hellip;",
+      "jobDescription": "<h3>About ElevenLabs</h3>\r\n<p>ElevenLabs is an AI research and product company transforming how we interact with technology.</p>\r\n<p>We launched in January 2023 […]",
+      "pubDate": "2026-11-19T03:30:13+00:00"
+    },
+    {
+      "id": 155893,
+      "url": "https://jobicy.com/jobs/155893-demo-architect-emea",
+      "jobSlug": "155893-demo-architect-emea",
+      "jobTitle": "Demo Architect, EMEA",
+      "companyName": "GitLab",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2020/12/WRILS-201207055737-109952.jpg",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Germany,  Ireland,  Spain,  UK",
+      "jobLevel": "Director",
+      "jobExcerpt": "GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to incr&hellip;",
+      "jobDescription": "<p>GitLab is the intelligent orchestration platform for DevSecOps. GitLab enables organizations to increase developer productivity, improve operational efficien […]",
+      "pubDate": "2026-11-19T03:15:08+00:00"
+    },
+    {
+      "id": 163116,
+      "url": "https://jobicy.com/jobs/163116-full-stack-engineer-10",
+      "jobSlug": "163116-full-stack-engineer-10",
+      "jobTitle": "Full Stack Engineer",
+      "companyName": "BJAK",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/11/3597740ddc1e-221.webp",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Spain",
+      "jobLevel": "Any",
+      "jobExcerpt": "About BJAK The original mission of BJAK is we believe people deserve smarter ways to plan, save and &hellip;",
+      "jobDescription": "<h3><strong>About <a href=\"https://jobicy.com/company/bjak\" target=\"_blank\" rel=\"noopener\">BJAK</a></strong></h3>\n<p>The original mission of BJAK is we believe  […]",
+      "pubDate": "2026-11-18T12:43:21+00:00"
+    },
+    {
+      "id": 163113,
+      "url": "https://jobicy.com/jobs/163113-full-stack-engineer-elevenmusic",
+      "jobSlug": "163113-full-stack-engineer-elevenmusic",
+      "jobTitle": "Full-Stack Engineer - ElevenMusic",
+      "companyName": "Elevenlabs",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2025/06/e01b4c5d-221.png",
+      "jobIndustry": [
+        "Software Engineering"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Denmark,  France,  Netherlands,  Poland,  UK,  USA",
+      "jobLevel": "Any",
+      "jobExcerpt": "About ElevenLabs ElevenLabs is an AI research and product company transforming how we interact with &hellip;",
+      "jobDescription": "<h3>About <a href=\"https://jobicy.com/company/elevenlabs\" target=\"_blank\" rel=\"noopener\">ElevenLabs</a></h3>\n<p>ElevenLabs is an AI research and product company […]",
+      "pubDate": "2026-11-18T12:43:16+00:00"
+    },
+    {
+      "id": 163106,
+      "url": "https://jobicy.com/jobs/163106-senior-qa-engineer-5",
+      "jobSlug": "163106-senior-qa-engineer-5",
+      "jobTitle": "Senior QA Engineer",
+      "companyName": "Cross River",
+      "companyLogo": "https://jobicy.com/data/server-nyc0409/galaxy/mercury/2026/11/5d9a1e470704-221.webp",
+      "jobIndustry": [
+        "QA & Testing"
+      ],
+      "jobType": [
+        "Full-Time"
+      ],
+      "jobGeo": "Spain",
+      "jobLevel": "Senior",
+      "jobExcerpt": "Who We Are Cross River builds the infrastructure behind the world’s most innovative financial produc&hellip;",
+      "jobDescription": "<p><strong>Who We Are</strong></p>\n<p><a href=\"https://jobicy.com/company/cross-river\" target=\"_blank\" rel=\"noopener\">Cross River</a> builds the infrastructure  […]",
+      "pubDate": "2026-11-18T12:42:34+00:00",
+      "salaryMin": 55000,
+      "salaryMax": 70000,
+      "salaryCurrency": "EUR",
+      "salaryPeriod": "yearly"
+    }
+  ],
+  "statusCode": 200,
+  "success": true
+}
