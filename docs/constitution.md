@@ -73,7 +73,7 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 
 ## IX. Demo y portfolio
 
-1. Durante el MVP la app se ejecuta en local con Docker Compose.
+1. Hasta que un ADR decida lo contrario, la app se ejecuta en local con Docker Compose.
 2. La demo de portfolio se hace con vídeo y capturas.
 3. El despliegue público en la nube es una fase posterior.
 
@@ -83,7 +83,7 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 
 ## Historial
 
-- **4.0.0** (2026-11-24): el principio VIII se redefine; el MVP se cierra como v0.1.0 con la spec 001 (un día después de la fecha prevista) y la puntuación con IA pasa a la v0.2.0 con fecha objetivo 2026-12-01; las versiones se marcan con tag y release (ADR-0014).
+- **4.0.0** (2026-11-24): el principio VIII se redefine; el MVP se cierra como v0.1.0 con la spec 001 (un día después de la fecha prevista) y la puntuación con IA pasa a la v0.2.0 con fecha objetivo 2026-12-01; las versiones se marcan con tag y release (ADR-0014). Se aclara IX.1 (ejecución en local hasta nueva decisión).
 - **3.0.0** (2026-11-16): el principio VIII se redefine; el MVP se recorta a un conector (Jobicy) + puntuación con IA, e InfoJobs, deduplicación y filtros pasan a la fase 2; se anota III.4 (ADR-0013).
 - **2.0.0** (2026-11-09): el principio IV se redefine; se eliminan los conectores restringidos y solo se admiten fuentes con acceso automatizado permitido (ADR-0002).
 - **1.0.0** (2026-11-09): versión inicial.
