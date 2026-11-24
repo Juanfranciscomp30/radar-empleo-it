@@ -1,6 +1,6 @@
 # Spec 001: Ofertas reales de Jobicy, de la fuente a la pantalla
 
-**Estado:** Aprobada · **Fecha:** 2026-11-11 · **Relacionado:** constitución v3.0.0 (III, IV, VI, VIII), ADR-0002, ADR-0003, ADR-0013
+**Estado:** Implementada · **Fecha:** 2026-11-11 · **Relacionado:** constitución v3.0.0 (III, IV, VI, VIII), ADR-0002, ADR-0003, ADR-0013
 
 ## Objetivo
 

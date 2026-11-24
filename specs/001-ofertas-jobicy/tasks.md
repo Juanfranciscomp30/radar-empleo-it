@@ -105,7 +105,7 @@
   - Comprobación: las imágenes se ven en el README en GitHub (después del merge).
   - Commit: `docs: capturas del listado de ofertas`
 
-- [ ] **T12 [YO] Verificación final de la spec**
+- [x] **T12 [YO] Verificación final de la spec**
   - Qué: recorrer CA-1 a CA-11 de `spec.md` y comprobar que se cumplen; cambiar el estado de `spec.md` a **Implementada**. Después, cerrar la spec con **`/pr`**.
   - Comprobación: todos los criterios cumplidos; el revisor da APTA (o APTA CON OBSERVACIONES aceptadas), CI en verde y merge hecho.
   - Commit: `docs: spec 001 implementada`
