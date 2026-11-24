@@ -1,6 +1,6 @@
 # Constitución — Radar de Empleo IT
 
-**Versión:** 3.0.0 · **Fecha:** 2026-11-16 · **Estado:** vigente
+**Versión:** 4.0.0 · **Fecha:** 2026-11-24 · **Estado:** vigente
 
 Este documento recoge los principios no negociables del proyecto. Toda spec, plan y línea de código debe respetarlos. Cambiarlos requiere un ADR y subir la versión.
 
@@ -64,10 +64,11 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 
 ## VIII. Alcance y plazos
 
-- **MVP en 2 semanas como máximo** (fecha límite: 2026-11-23).
-- **Dentro del MVP** (ADR-0013): un conector (Jobicy), listado de ofertas, puntuación de encaje con IA y orden del listado por encaje.
-- **Fase 2 (después del MVP):** conector de InfoJobs y otros, deduplicación entre fuentes (III.4), filtros y búsqueda.
-- **Fuera del MVP y de la fase 2:** cuentas de usuario, despliegue en la nube y notificaciones.
+- **v0.1.0 — MVP** (cerrado el 2026-11-24, ADR-0014): un conector (Jobicy) y listado de ofertas (spec 001).
+- **v0.2.0** (fecha objetivo: **2026-12-01**, ADR-0014): puntuación de encaje con IA, con explicación, y orden del listado por encaje.
+- **Fase 2 (después de la v0.2.0):** conector de InfoJobs y otros, deduplicación entre fuentes (III.4), filtros y búsqueda.
+- **Fuera de alcance por ahora:** cuentas de usuario, despliegue en la nube y notificaciones.
+- Cada versión se marca con un tag `vX.Y.Z` y una release en GitHub.
 - Ante la duda, se recorta alcance antes que mover la fecha.
 
 ## IX. Demo y portfolio
@@ -82,6 +83,7 @@ Añadir una tecnología fuera de esta lista requiere ADR.
 
 ## Historial
 
+- **4.0.0** (2026-11-24): el principio VIII se redefine; el MVP se cierra como v0.1.0 con la spec 001 (un día después de la fecha prevista) y la puntuación con IA pasa a la v0.2.0 con fecha objetivo 2026-12-01; las versiones se marcan con tag y release (ADR-0014).
 - **3.0.0** (2026-11-16): el principio VIII se redefine; el MVP se recorta a un conector (Jobicy) + puntuación con IA, e InfoJobs, deduplicación y filtros pasan a la fase 2; se anota III.4 (ADR-0013).
 - **2.0.0** (2026-11-09): el principio IV se redefine; se eliminan los conectores restringidos y solo se admiten fuentes con acceso automatizado permitido (ADR-0002).
 - **1.0.0** (2026-11-09): versión inicial.
