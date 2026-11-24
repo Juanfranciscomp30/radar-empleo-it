@@ -196,30 +196,35 @@ radar-empleo-it/
 
 ## 🗺️ Roadmap
 
+### v0.1.0 – MVP (cerrado 24/11)
+
 - [x] **Spec 000: esqueleto**
   - [x] Backend con endpoint de salud y test de integración
   - [x] Docker Compose con PostgreSQL y backend
   - [x] Frontend Angular con página de estado, servido con nginx
   - [x] CI con GitHub Actions
   - [x] README con instrucciones de arranque
-
-### MVP (23/11)
-
 - [x] **Spec 001: ofertas reales de Jobicy**
   - [x] Modelo de oferta normalizado, tabla con Flyway y guardado sin duplicados
   - [x] Arquitectura de conectores y conector de Jobicy (filtro de industria y región)
   - [x] Ingesta programada cada 6 h, al arrancar y manual tras un *flag*
   - [x] API paginada `GET /api/ofertas`
   - [x] Listado de ofertas en tarjetas, con atribución a Jobicy
+
+### v0.2.0 (objetivo 01/12): puntuación con IA
+
 - [ ] Puntuación de encaje con IA, con explicación de motivos
 - [ ] Listado de ofertas ordenado por encaje
-- [ ] Demo en vídeo
 
 ### Fase 2
 
 - [ ] Conector InfoJobs (API oficial) y otros conectores
 - [ ] Deduplicación entre fuentes
 - [ ] Filtros y búsqueda en el listado
+
+### Portfolio
+
+- [ ] Demo en vídeo (constitución IX.2), prevista después de la v0.2.0
 
 ## 👤 Autor
 
