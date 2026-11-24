@@ -92,7 +92,7 @@
 
 ## Integración y documentación
 
-- [ ] **T10 [IA] Comprobación con Docker completo y README**
+- [x] **T10 [IA] Comprobación con Docker completo y README**
   - Qué: verificar el sistema completo con `docker compose up --build` y actualizar el README: descripción del listado, nueva variable de entorno, decisiones (ADR-0010 a 0012) y roadmap.
   - Comprobación: con `docker compose up --build` (sin `npm start`), `http://localhost:4200` muestra ofertas reales; el README se sigue sin conocimientos previos.
   - Commit: `docs: README con el listado de ofertas`
