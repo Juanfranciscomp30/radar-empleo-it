@@ -15,7 +15,7 @@ Cada decisión de arquitectura o de proceso se registra aquí como un ADR (*Arch
 |---|---|---|---|
 | [0001](0001-sdd-manual.md) | SDD manual con evolución a comandos personalizados | Aceptado | 2026-11-09 |
 | [0002](0002-politica-fuentes-legal.md) | Solo fuentes con acceso automatizado permitido | Aceptado | 2026-11-09 |
-| [0003](0003-fuentes-mvp.md) | Fuentes de ofertas del MVP | Aceptado (calendario actualizado por ADR-0013) | 2026-11-09 |
+| [0003](0003-fuentes-mvp.md) | Fuentes de ofertas del MVP | Aceptado (revisado; calendario actualizado por ADR-0013) | 2026-11-09 |
 | [0004](0004-versiones-stack.md) | Versiones del stack | Aceptado | 2026-11-09 |
 | [0005](0005-herramienta-build-maven.md) | Maven como herramienta de build del backend | Aceptado | 2026-11-09 |
 | [0006](0006-frontend-nginx.md) | Frontend servido con nginx en Docker | Aceptado | 2026-11-09 |
