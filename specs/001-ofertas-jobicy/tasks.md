@@ -54,7 +54,7 @@
   - Commit: `feat(backend): conector de Jobicy`
   - Cubre: CA-1, CA-2, CA-5, CA-10, CA-11
 
-- [ ] **T6 [IA] Ingesta programada, al arrancar y manual**
+- [x] **T6 [IA] Ingesta programada, al arrancar y manual**
   - Qué: `IngestaScheduler` (cron configurable y ejecución al arrancar) e `IngestaController` tras el flag, según plan §2.6 y ADR-0012. Variable `RADAR_INGESTA_MANUAL_HABILITADA` en `docker-compose.yml` y `.env.example`. Test: `404` con el flag desactivado.
   - Comprobación:
     1. `docker compose up --build -d db backend` → en `docker compose logs backend` aparece el resumen de la ingesta al arrancar.

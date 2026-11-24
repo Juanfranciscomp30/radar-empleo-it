@@ -24,6 +24,15 @@ radar:
       url: https://jobicy.com/api/v2/remote-jobs
       # Ofertas por ingesta; se hace una sola llamada (uso justo de Jobicy)
       cantidad: 100
+  ingesta:
+    # Cada 6 horas (segundo minuto hora día mes día-semana): 4 llamadas al día, uso justo (ADR-0012)
+    cron: "0 0 */6 * * *"
+    # Una ingesta al arrancar, para tener ofertas nada más levantar el sistema
+    al-arrancar: true
+    manual:
+      # POST /api/ingestas solo existe si es true. En Docker: RADAR_INGESTA_MANUAL_HABILITADA en .env.
+      # Nunca se activa en una demo pública (ADR-0012)
+      habilitada: false
 
 management:
   endpoints:
